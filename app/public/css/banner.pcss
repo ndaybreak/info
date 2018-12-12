@@ -1,0 +1,78 @@
+.tai-banner {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.tai-banner-wrap {
+  & > * {
+    float: left;
+  }
+  .item {
+    width: 400px;
+    height: 264px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    img {
+      width: 400px;
+      height: 264px;
+    }
+    .label {
+      position: absolute;
+      bottom: 0;
+      font-size: 18px;
+      width: 100%;
+      padding: 7px 20px 0px 20px;
+      text-align: left;
+      color: #ffffff;
+      height: 81px;
+      background-color: rgba(0, 0, 0, .5);
+    }
+  }
+}
+.tai-banner-tool {
+  .left-cover {
+    position: absolute;
+    left: 0px;
+    width: 400px;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 50;
+  }
+  .right-cover {
+    position: absolute;
+    right: 0px;
+    width: 400px;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 50;
+  }
+  .btn-left {
+    position: absolute;
+    left: 20px;
+    top: 117px;
+    z-index: 100;
+    cursor: pointer;
+  }
+  .btn-right {
+    position: absolute;
+    right: 20px;
+    top: 117px;
+    z-index: 100;
+    cursor: pointer;
+  }
+}
+.tai-dot-wrap {
+  position: absolute;
+  background: transparent;
+  width: 100%;
+  text-align: center;
+  bottom: 3px;
+  .dot {
+    cursor: pointer;
+    margin-right: 7px;
+  }
+}
