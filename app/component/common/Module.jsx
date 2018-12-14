@@ -65,12 +65,13 @@ class Module extends React.Component {
                 {this.state.data.map((item, i) => {
                     return (
                         <div className="item clearfix" key={i}>
-                            <a className="link" href={'detail.html?categoryId=' + (item.id || getSearchPara('categoryId')) + '&id=' + item.info_id}>
-                                <span className="pic-wrap"><img className="pic" src={item.picture_url} alt=""/></span>
+                            <a className="link" href={'detail.html?categoryId=' + (item.category_id || getSearchPara('categoryId')) + '&id=' + item.id}>
+                                <span className="pic-wrap"><img className="pic" src={item.pic_url} alt=""/></span>
                                 <div className="content">
                                     <div className="detail-title">{item.title}</div>
                                     <div className="detail-subtitle">{item.subhead}</div>
-                                    <div className="detail-info">{item.author} &nbsp;&nbsp;&nbsp; {formatArticleDate(item.incident_time)}</div>
+                                    {/*<div className="detail-info">{item.author} &nbsp;&nbsp;&nbsp; {formatArticleDate(item.incident_time)}</div>*/}
+                                    <div className="detail-info">{item.author} &nbsp;&nbsp;&nbsp; {formatArticleDate(item.date)}</div>
                                 </div>
                             </a>
                         </div>

@@ -10,7 +10,7 @@ const Index = () => {
             <Banner/>
             <div className="home-content clearfix">
                 <Module/>
-                <News/>
+                {/*<News/>*/}
             </div>
         </div>
     )

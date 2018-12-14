@@ -6,6 +6,7 @@ import eventProxy from '@/utils/eventProxy'
 import 'antd/lib/icon/style/css'
 import '@/public/css/common.pcss'
 import logoImg from '@/public/img/logo.png'
+// import logoImg from '@/public/img/logo.jpg'
 import codeImg from '@/public/img/code.jpg'
 import SearchInput from '@/component/common/SearchInput'
 
@@ -57,7 +58,7 @@ class Header extends React.Component {
                     <nav className="nav">
                         <a className={!this.state.activeMenuId ? 'menu active' : 'menu'}  href="index.html">推荐</a>
                         {this.state.menus.map((menu, i) => {
-                            return <a className={this.state.activeMenuId == menu.id ? 'menu active' : 'menu'} key={i}  href={'index.html?categoryId=' + menu.id}>{menu.catalog}</a>
+                            return <a className={this.state.activeMenuId == menu.id ? 'menu active' : 'menu'} key={i}  href={'index.html?categoryId=' + menu.id}>{menu.name}</a>
                         })}
                     </nav>
                     <div className="right-part">

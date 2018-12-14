@@ -3,19 +3,15 @@ import { kebabCaseData2Camel } from '@/utils'
 // module--banner
 export function getBannerData() {
     return request({
-        url: '/managementSystem/queryNewsCenterBanner',
-        method: 'post',
-        params: {
-            currPage: 1,
-            pageSize: 15
-        }
+        url: '/article/banners',
+        method: 'post'
     })
 }
 
 // module--菜单
 export function getMenus() {
     return request({
-        url: '/managementSystem/queryNewsCenterCatelogWEB',
+        url: '/category/list',
         method: 'get'
     })
 }
@@ -23,7 +19,7 @@ export function getMenus() {
 // module--推荐列表
 export function getRecommendList(currPage) {
     return request({
-        url: '/managementSystem/queryNewsRecommendWEB',
+        url: '/article/recommends',
         method: 'get',
         params: {
             currPage: currPage,
