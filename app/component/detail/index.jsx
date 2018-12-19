@@ -38,7 +38,7 @@ class NewsMore extends React.Component {
                 <div className="detail-cont clearfix">
                     <Breadcrumb data={this.state.breadcrumbData}></Breadcrumb>
                     <div className="title">{detail.title}</div>
-                    <div className="info">责任编辑：{detail.author}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{formatArticleDate(detail.incident_time)}</div>
+                    <div className="info">责任编辑：{detail.author}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{formatArticleDate(detail.date)}</div>
                     <div className="content"  dangerouslySetInnerHTML={{__html: detail.content}}></div>
                 </div>
 

@@ -23,29 +23,29 @@ export function getRecommendList(currPage) {
         method: 'get',
         params: {
             currPage: currPage,
-            pageSize: 15
+            pageSize: 2
         }
     })
 }
 
-// module--模块列表
+// module--单个模块下的文章列表
 export function getModuleList(moduleId, currPage) {
     return request({
-        url: '/managementSystem/queryNewsCenterCatalogInfo',
-        method: 'post',
+        url: '/article/list',
+        method: 'get',
         params: {
-            id: moduleId,
+            categoryId: moduleId,
             currPage: currPage,
-            pageSize: 15
+            pageSize: 2
         }
     })
 }
 
-// module--模块详情
+// module--文章详情
 export function getModuleDetail(id) {
     return request({
-        url: '/managementSystem/queryNewsCenterInfoByid',
-        method: 'post',
+        url: '/article/detail',
+        method: 'get',
         params: { id }
     })
 }
@@ -53,8 +53,8 @@ export function getModuleDetail(id) {
 // module--快讯
 export function getNewsList(currPage) {
     return request({
-        url: '/managementSystem/queryNewsCenterFlashNews',
-        method: 'post',
+        url: '/news/list',
+        method: 'get',
         params: {
             currPage: currPage,
             pageSize: 10
@@ -64,8 +64,8 @@ export function getNewsList(currPage) {
 // module--快讯详情
 export function getNewsDetail(id) {
     return request({
-        url: '/managementSystem/queryWebFlashNewsByid',
-        method: 'post',
+        url: '/news/detail',
+        method: 'get',
         params: { id }
     })
 }

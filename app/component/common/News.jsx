@@ -26,7 +26,7 @@ class Module extends React.Component {
 
     formatData(list) {
         let newList = list.map(item => {
-            let list = parseTime(item.incident_time, '{y}-{m}-{d} {h}:{i}').split(' ')
+            let list = parseTime(item.news_date, '{y}-{m}-{d} {h}:{i}').split(' ')
             item.date = list[0]
             item.time = list[1]
             return item

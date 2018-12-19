@@ -69,7 +69,7 @@ class Module extends React.Component {
                                 <span className="pic-wrap"><img className="pic" src={item.pic_url} alt=""/></span>
                                 <div className="content">
                                     <div className="detail-title">{item.title}</div>
-                                    <div className="detail-subtitle">{item.subhead}</div>
+                                    <div className="detail-subtitle">{item.sub_title}</div>
                                     {/*<div className="detail-info">{item.author} &nbsp;&nbsp;&nbsp; {formatArticleDate(item.incident_time)}</div>*/}
                                     <div className="detail-info">{item.author} &nbsp;&nbsp;&nbsp; {formatArticleDate(item.date)}</div>
                                 </div>

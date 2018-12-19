@@ -352,7 +352,7 @@ export function getMenuNameById(id) {
     let name = ''
     menus.forEach(menu => {
       if(menu.id == id) {
-          name = menu.catalog
+          name = menu.name
       }
     })
     return name
@@ -372,7 +372,7 @@ export function jumpUrl(path, params={}) {
 }
 
 export function formatArticleDate(date) {
-  const d = new Date() - parseInt(date)
+  const d = new Date() - new Date(date).getTime()
   const second = Math.ceil(d/1000/60)
   const hour = Math.floor(second/60)
   const day = Math.floor(hour/24)

@@ -173,7 +173,7 @@ class Banner extends React.Component {
 
     goDetail(item) {
         jumpUrl('detail.html',{
-            categoryId: item.catalog_id || getSearchPara('categoryId'),
+            categoryId: item.category_id || getSearchPara('categoryId'),
             id: item.id
         })
     }
